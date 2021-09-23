@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PantoBot</string>
+    <string name="piechart_header_available">Pie chart about influence ratio</string>
+    <string name="groupedbarchart_header_available">Diagram about influence, year \u0026 sum related weight </string>
+    <string name="groupedbarchart_title">Grouped bar chart </string>
+    <string name="chart_header_notavailable">No data available, please try it later again</string>
+</resources>

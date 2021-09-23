@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:layout_alignParentEnd="false"
+>
+
+    <!-- BOT -->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bot_frame">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            <!-- msg_bot_bubble -->
+            <RelativeLayout
+                    android:id="@+id/msg_bot_bubble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bubble_bot">
+
+                <TextView
+                        android:id="@+id/msg_bot_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="18sp"
+                        android:color="@android:color/black"/>
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/chart_lupe"
+                        android:onClick="goToChartActivity"
+                        android:id="@+id/msg_bot_imageview"
+                        android:visibility="gone"/>
+                <!--android:src="@drawable/chart"-->
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+        </FrameLayout>
+    </LinearLayout>
+    <!-- /BOT -->
+
+    <!-- CLIENT -->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/client_frame"
+            android:visibility="gone">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+        </FrameLayout>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            <!-- msg_client_bubble -->
+            <RelativeLayout
+                    android:id="@+id/msg_client_bubble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bubble_client"
+                    android:layout_gravity="end">
+
+                <TextView
+                        android:id="@+id/msg_client_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="message"
+                        android:textSize="18sp"
+                        android:color="@android:color/white"
+                />
+                <!--TODO set bubble max length-->
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <!-- /CLIENT -->
+
+</RelativeLayout>
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="at.ac.univie.pantobot.view.HomeActivity"
+>
+
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/msg_listview"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/user_input"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+
+    <!-- User Input -->
+    <FrameLayout
+            android:id="@+id/user_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:elevation="4dp">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding"
+                android:paddingTop="@dimen/padding"
+                android:paddingLeft="@dimen/padding">
+
+            <!-- Text Input -->
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="56dp"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/userInputText"
+                        android:padding="16dp"
+                        android:hint="Type a message"/>
+            </FrameLayout>
+            <!-- /Text Input -->
+
+            <!-- Buttons -->
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                <ImageButton
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:srcCompat="@android:drawable/ic_menu_send"
+                        android:id="@+id/sendButton"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center"
+                        android:tint="@color/colorAccent"
+                        android:visibility="invisible"/>
+
+                <ImageButton
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:srcCompat="@android:drawable/ic_btn_speak_now"
+                        android:id="@+id/voiceInputButton"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center"
+                        android:tint="@color/colorAccent"/>
+
+
+            </FrameLayout>
+            <!-- Buttons -->
+
+        </LinearLayout>
+    </FrameLayout>
+    <!-- /User Input -->
+
+
+</RelativeLayout>
+</LinearLayout>
