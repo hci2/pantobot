@@ -14,7 +14,7 @@ import ai.api.model.AIResponse;
  */
 public abstract class APIConnector extends AsyncTask<AIRequest, Void, AIResponse> {
     protected AIConfiguration config;
-    protected final String access_token ="7fa10e7fccb145b9a71bc81510840654";
+    protected final String access_token ="TODO:INSERT_ACCESS_TOKEN";
     protected Context context;
     protected Activity parent;
 
